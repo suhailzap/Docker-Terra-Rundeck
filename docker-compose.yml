@@ -15,6 +15,7 @@ services:
           - ${RUNDECK_LICENSE_FILE:-/dev/null}:/home/rundeck/etc/rundeckpro-license.key
         ports:
           - 4440:4440
+          - 3306:3306
     mysql:
         image: mysql:5.7
         expose:
