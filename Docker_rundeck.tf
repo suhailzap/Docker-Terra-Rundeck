@@ -1,6 +1,6 @@
 # the EC2 instance details
 resource "aws_instance" "example" {
-  ami                    = "ami-04e601abe3e1a910f"
+  ami                    = "ami-04e601abe3e1a910f" #chenge with your ami
   instance_type          = "t2.medium"
   key_name               = "Rundeck-test"
   vpc_security_group_ids = ["${aws_security_group.secgroup-example.id}"]
