@@ -2,7 +2,7 @@
 resource "aws_security_group" "secgroup-example" {
   name        = "secgroup-example"
   description = "Security Group for Rundeck Terraform Deployment Example"
-  vpc_id      = "vpc-0eae937cb9e36f396"
+  vpc_id      = "vpc-0eae937cb9e36f396" #change with vpc id 
   tags = {
     Name = "Rundeck Terraform Deployment Example Security Group"
   }
