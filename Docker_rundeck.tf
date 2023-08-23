@@ -1,6 +1,6 @@
 # the EC2 instance details
 resource "aws_instance" "example" {
-  ami                    = "ami-04e601abe3e1a910f" #chenge with your ami
+  ami                    = "ami-04e601abe3e1a910f" #change with your ami
   instance_type          = "t2.medium"
   key_name               = "Rundeck-test"
   vpc_security_group_ids = ["${aws_security_group.secgroup-example.id}"]
@@ -16,7 +16,7 @@ resource "aws_instance" "example" {
               # Create Docker network
               sudo docker network create mynet
               cd /home/ubuntu/
-              sudo git clone https://github.com/suhailzap/Docker-Terra-Rundeck.git
+              sudo git clone https://github.com/suhailzap/Docker-Terra-Rundeck.git # its better to clone the repo to your git and clone it from there
               cd /home/ubuntu/Docker-Terra-Rundeck
               sudo docker-compose up -d
               sudo docker exec mydb mysql:5.7 -u root -p root -e "create database rundeck; grant all privileges on *.* to 'rundeck'@'%';"
